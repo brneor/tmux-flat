@@ -33,35 +33,119 @@ mode_indicator_pos="$(tmux_get @tmux_flat_mode_indicator_pos)"
 time_format=$(tmux_get @tmux_flat_time_format '%T')
 date_format=$(tmux_get @tmux_flat_date_format '%F')
 # short for Theme-Colour
-TC=$(tmux_get '@tmux_flat_theme' 'kanagawa')
+TC=$(tmux_get '@tmux_flat_theme' 'crystalblue')
 case $TC in
-    'kanagawa' )
+    'fujiwhite' ) 
+        TC='#dcd7ba'
+        ;; 
+    'oldwhite' ) 
+        TC='#c8c093'
+        ;; 
+    'sumiink0' ) 
+        TC='#16161d'
+        ;; 
+    'sumiink1' ) 
+        TC='#1f1f28'
+        ;; 
+    'sumiink2' ) 
+        TC='#2a2a37'
+        ;; 
+    'sumiink3' ) 
+        TC='#363646'
+        ;; 
+    'sumiink4' ) 
+        TC='#54546d'
+        ;; 
+    'waveblue1' ) 
+        TC='#223249'
+        ;; 
+    'waveblue2' ) 
+        TC='#2d4f67'
+        ;; 
+    'wintergreen' ) 
+        TC='#2b3328'
+        ;; 
+    'winteryellow' ) 
+        TC='#49443c'
+        ;; 
+    'winterred' ) 
+        TC='#43242b'
+        ;; 
+    'winterblue' ) 
+        TC='#252535'
+        ;; 
+    'autumngreen' ) 
+        TC='#76946a'
+        ;; 
+    'autumnred' ) 
+        TC='#c34043'
+        ;; 
+    'autumnyellow' ) 
+        TC='#dca561'
+        ;; 
+    'samuraired' ) 
+        TC='#e82424'
+        ;; 
+    'roninyellow' ) 
+        TC='#ff9e3b'
+        ;; 
+    'waveaqua1' ) 
+        TC='#6a9589'
+        ;; 
+    'dragonblue' ) 
+        TC='#658594'
+        ;; 
+    'fujigray' ) 
+        TC='#727169'
+        ;; 
+    'springviolet1' ) 
+        TC='#938aa9'
+        ;; 
+    'oniviolet' ) 
+        TC='#957fb8'
+        ;; 
+    'crystalblue' ) 
         TC='#7e9cd8'
-        ;;
-    'gold' )
-        TC='#ffb86c'
-        ;;
-    'redwine' )
-        TC='#b34a47'
-        ;;
-    'moon' )
-        TC='#00abab'
-        ;;
-    'forest' )
-        TC='#228b22'
-        ;;
-    'violet' )
-        TC='#9370db'
-        ;;
-    'snow' )
-        TC='#fffafa'
-        ;;
-    'coral' )
-        TC='#ff7f50'
-        ;;
-    'sky' )
-        TC='#87ceeb'
-        ;;
+        ;; 
+    'springviolet2' ) 
+        TC='#9cabca'
+        ;; 
+    'springblue' ) 
+        TC='#7fb4ca'
+        ;; 
+    'lightblue' ) 
+        TC='#a3d4d5'
+        ;; 
+    'waveaqua2' ) 
+        TC='#7aa89f'
+        ;; 
+    'springgreen' ) 
+        TC='#98bb6c'
+        ;; 
+    'boatyellow1' ) 
+        TC='#938056'
+        ;; 
+    'boatyellow2' ) 
+        TC='#c0a36e'
+        ;; 
+    'carpyellow' ) 
+        TC='#e6c384'
+        ;; 
+    'sakurapink' ) 
+        TC='#d27e99'
+        ;; 
+    'wavered' ) 
+        TC='#e46876'
+        ;; 
+    'peachred' ) 
+        TC='#ff5d62'
+        ;; 
+    'surimiorange' ) 
+        TC='#ffa066'
+        ;; 
+    'katanagray' ) 
+        TC='#717c7c'
+        ;; 
     'default' ) # Useful when your term changes colour dynamically (e.g. pywal)
         TC='colour3'
         ;;
