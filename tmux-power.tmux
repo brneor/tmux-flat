@@ -29,7 +29,7 @@ show_upload_speed="$(tmux_get @tmux_flat_show_upload_speed false)"
 show_download_speed="$(tmux_get @tmux_flat_show_download_speed false)"
 show_web_reachable="$(tmux_get @tmux_flat_show_web_reachable false)"
 prefix_highlight_pos=$(tmux_get @tmux_flat_prefix_highlight_pos)
-show_suspend="$(tmux_get @tmux_flat_show_suspend false)"
+mode_indicator_pos="$(tmux_get @tmux_flat_mode_indicator_pos)"
 time_format=$(tmux_get @tmux_flat_time_format '%T')
 date_format=$(tmux_get @tmux_flat_date_format '%F')
 # short for Theme-Colour
@@ -117,6 +117,9 @@ fi
 if [[ $prefix_highlight_pos == 'L' || $prefix_highlight_pos == 'LR' ]]; then
     LS="$LS#{prefix_highlight}"
 fi
+if [[ $mode_indicator_pos == 'L' || $mode_indicator_pos == 'LR' ]]; then
+    LS="$LS#{tmux_mode_indicator}"
+fi
 tmux_set status-left "$LS"
 
 # Right side of status bar
@@ -133,7 +136,7 @@ fi
 if [[ $prefix_highlight_pos == 'R' || $prefix_highlight_pos == 'LR' ]]; then
     RS="#{prefix_highlight}$RS"
 fi
-if "$show_suspend"; then
+if [[ $mode_indicator_pos == 'R' || $mode_indicator_pos == 'LR' ]]; then
     RS="#{tmux_mode_indicator}$RS"
 fi
 tmux_set status-right "$RS"
