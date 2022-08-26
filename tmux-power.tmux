@@ -29,6 +29,7 @@ show_upload_speed="$(tmux_get @tmux_flat_show_upload_speed false)"
 show_download_speed="$(tmux_get @tmux_flat_show_download_speed false)"
 show_web_reachable="$(tmux_get @tmux_flat_show_web_reachable false)"
 prefix_highlight_pos=$(tmux_get @tmux_flat_prefix_highlight_pos)
+show_suspend="$(tmux_get @tmux_flat_show_suspend false)"
 time_format=$(tmux_get @tmux_flat_time_format '%T')
 date_format=$(tmux_get @tmux_flat_date_format '%F')
 # short for Theme-Colour
@@ -131,6 +132,9 @@ if "$show_web_reachable"; then
 fi
 if [[ $prefix_highlight_pos == 'R' || $prefix_highlight_pos == 'LR' ]]; then
     RS="#{prefix_highlight}$RS"
+fi
+if "$show_suspend"; then
+    RS="#{tmux_mode_indicator}$RS"
 fi
 tmux_set status-right "$RS"
 
