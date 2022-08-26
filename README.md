@@ -2,7 +2,7 @@
 
 [![TPM](https://img.shields.io/badge/tpm--support-true-blue)](https://github.com/tmux-plugins/tpm)
 <!-- [![Awesome](https://img.shields.io/badge/Awesome-tmux-d07cd0?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABVklEQVRIS+3VvWpVURDF8d9CRAJapBAfwWCt+FEJthIUUcEm2NgIYiOxsrCwULCwktjYKSgYLfQF1JjCNvoMNhYRCwOO7HAiVw055yoBizvN3nBmrf8+M7PZsc2RbfY3AfRWeNMSVdUlHEzS1t6oqvt4n+TB78l/AKpqHrdwLcndXndU1WXcw50k10c1PwFV1fa3cQVzSR4PMd/IqaoLeIj2N1eTfG/f1gFVtQMLOI+zSV6NYz4COYFneIGLSdZSVbvwCMdxMsnbvzEfgRzCSyzjXAO8xlHcxMq/mI9oD+AGlhqgxjD93OVOD9TUuICdXd++/VeAVewecKKv2NPlfcHUAM1qK9FTnBmQvJjkdDfWzzE7QPOkAfZiEce2ECzhVJJPHWAfGuTwFpo365pO0NYjmEFr5Eas4SPeJfll2rqb38Z7/yaaD+0eNM3kPejt86REvSX6AamgdXkgoxLxAAAAAElFTkSuQmCC)](https://github.com/rothgar/awesome-tmux) -->
-<!-- [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://wfxr.mit-license.org/2017) -->
+[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://wfxr.mit-license.org/2017)
 
 `This is a work in progress`
 
@@ -64,20 +64,13 @@ set -g @tmux_flat_show_download_speed true
 # 'L' for left only, 'R' for right only and 'LR' for both
 set -g @tmux_flat_prefix_highlight_pos 'LR'
 ```
-
-**[tmux-web-reachable](https://github.com/wfxr/tmux-web-reachable)**
+**[tmux-mode-indicator](https://github.com/MunifTanjim/tmux-mode-indicator)**
 
 ```tmux
-set -g @tmux_flat_show_web_reachable true
+# 'L' for left only, 'R' for right only and 'LR' for both
+set -g @tmux_flat_mode_indicator_pos 'LR'
 ```
-
-### 🔗 Other plugins
-
-You might also find these useful:
-
-- [tmux-fzf-url](https://github.com/wfxr/tmux-fzf-url)
-- [tmux-net-speed](https://github.com/wfxr/tmux-net-speed)
-- [tmux-web-reachable](https://github.com/wfxr/tmux-web-reachable)
+You should avoid using this plugin alongside with `tmux-prefix-highlight` to avoid redundancy, as `tmux-mode-indicator` is also capable of highlighting prefix.
 
 ### 📃 License
 
